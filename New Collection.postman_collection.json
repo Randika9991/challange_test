@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "cc4adebd-2d51-4aef-b730-e73fdf3fb765",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31374577"
+	},
+	"item": [
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "wys_i8fQLwiXHNXQfJnjZq7jPCclFiiZaG3QNGCK",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uid\": \"user789\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"given_name\": \"Jane\",\r\n    \"middle_name\": \"Elizabeth\",\r\n    \"name\": \"Jane Elizabeth Smith\",\r\n    \"family_name\": \"Smith\",\r\n    \"nickname\": \"Janie\",\r\n    \"phone_number\": \"+0987654321\",\r\n    \"comment\": \"Account created for new project development.\",\r\n    \"picture\": \"https://example.com/profile-pic-jane.jpg\",\r\n    \"directory\": \"project-team\",\r\n    \"metadata\": {\r\n        \"color\": \"red\",\r\n        \"size\": \"M\"\r\n    },\r\n    \"tags\": [\"developer\", \"team-lead\"],\r\n    \"is_suspended\": true,\r\n    \"is_bot\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://88586822b4ba4bbe858cac2aa6e0cb9c.weavy.io/api/users",
+							"protocol": "https",
+							"host": [
+								"88586822b4ba4bbe858cac2aa6e0cb9c",
+								"weavy",
+								"io"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "wys_i8fQLwiXHNXQfJnjZq7jPCclFiiZaG3QNGCK",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://88586822b4ba4bbe858cac2aa6e0cb9c.weavy.io/api/users/user789",
+							"protocol": "https",
+							"host": [
+								"88586822b4ba4bbe858cac2aa6e0cb9c",
+								"weavy",
+								"io"
+							],
+							"path": [
+								"api",
+								"users",
+								"user789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "wys_i8fQLwiXHNXQfJnjZq7jPCclFiiZaG3QNGCK",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://88586822b4ba4bbe858cac2aa6e0cb9c.weavy.io/api/users",
+							"protocol": "https",
+							"host": [
+								"88586822b4ba4bbe858cac2aa6e0cb9c",
+								"weavy",
+								"io"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "wys_i8fQLwiXHNXQfJnjZq7jPCclFiiZaG3QNGCK",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uid\": \"user789\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"given_name\": \"saman\",\r\n    \"middle_name\": \"Elizabeth\",\r\n    \"name\": \"Jane Elizabeth Smith\",\r\n    \"family_name\": \"Smith\",\r\n    \"nickname\": \"Janie\",\r\n    \"phone_number\": \"+0987654321\",\r\n    \"comment\": \"Account created for new project development.\",\r\n    \"picture\": \"https://example.com/profile-pic-jane.jpg\",\r\n    \"directory\": \"project-team\",\r\n    \"metadata\": {\r\n        \"color\": \"red\",\r\n        \"size\": \"M\"\r\n    },\r\n    \"tags\": [\"developer\", \"team-lead\"],\r\n    \"is_suspended\": true,\r\n    \"is_bot\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://88586822b4ba4bbe858cac2aa6e0cb9c.weavy.io/api/users/user789",
+							"protocol": "https",
+							"host": [
+								"88586822b4ba4bbe858cac2aa6e0cb9c",
+								"weavy",
+								"io"
+							],
+							"path": [
+								"api",
+								"users",
+								"user789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "wys_i8fQLwiXHNXQfJnjZq7jPCclFiiZaG3QNGCK",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uid\": \"user789\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"given_name\": \"saman\",\r\n    \"middle_name\": \"Elizabeth\",\r\n    \"name\": \"Jane Elizabeth Smith\",\r\n    \"family_name\": \"Smith\",\r\n    \"nickname\": \"Janie\",\r\n    \"phone_number\": \"+0987654321\",\r\n    \"comment\": \"Account created for new project development.\",\r\n    \"picture\": \"https://example.com/profile-pic-jane.jpg\",\r\n    \"directory\": \"project-team\",\r\n    \"metadata\": {\r\n        \"color\": \"red\",\r\n        \"size\": \"M\"\r\n    },\r\n    \"tags\": [\"developer\", \"team-lead\"],\r\n    \"is_suspended\": true,\r\n    \"is_bot\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://88586822b4ba4bbe858cac2aa6e0cb9c.weavy.io/api/users/user789",
+							"protocol": "https",
+							"host": [
+								"88586822b4ba4bbe858cac2aa6e0cb9c",
+								"weavy",
+								"io"
+							],
+							"path": [
+								"api",
+								"users",
+								"user789"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
