@@ -14,7 +14,6 @@ public class UserService {
     private final OkHttpClient client = new OkHttpClient();
 
     public String createUser() throws IOException {
-        // Request body
         String json = "{\n" +
                 "    \"uid\": \"user78090\",\n" +
                 "    \"email\": \"jane.doe@example.com\",\n" +
@@ -36,7 +35,6 @@ public class UserService {
                 "    \"is_bot\": true\n" +
                 "}\n";
 
-        // Request
         RequestBody body = RequestBody.create(json, MediaType.parse("application/json; charset=utf-8"));
         Request request = new Request.Builder()
                 .url(API_URL)
@@ -44,7 +42,6 @@ public class UserService {
                 .post(body)
                 .build();
 
-        // Execute request
         try (Response response = client.newCall(request).execute()) {
 
             return response.body().string();
@@ -52,14 +49,12 @@ public class UserService {
     }
 
     public String getUser(String uid) throws IOException {
-        // Request
         Request request = new Request.Builder()
                 .url(API_URL + "/" + uid)
                 .addHeader("Authorization", "Bearer " + API_KEY)
                 .get()
                 .build();
 
-        // Execute request
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
