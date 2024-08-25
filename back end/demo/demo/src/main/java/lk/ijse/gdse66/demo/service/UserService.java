@@ -16,9 +16,7 @@ public class UserService {
     public String createUser() throws IOException {
         // Request body
         String json = "{\n" +
-                "    \"id\": 2,\n" +
-                "    \"uid\": \"user78990\",\n" +
-                "    \"display_name\": \"Jane Elizabeth Smith\",\n" +
+                "    \"uid\": \"user78090\",\n" +
                 "    \"email\": \"jane.doe@example.com\",\n" +
                 "    \"given_name\": \"Jane\",\n" +
                 "    \"middle_name\": \"Elizabeth\",\n" +
@@ -27,22 +25,16 @@ public class UserService {
                 "    \"nickname\": \"Janie\",\n" +
                 "    \"phone_number\": \"+0987654321\",\n" +
                 "    \"comment\": \"Account created for new project development.\",\n" +
+                "    \"picture\": \"https://example.com/profile-pic-jane.jpg\",\n" +
+                "    \"directory\": \"project-team\",\n" +
                 "    \"metadata\": {\n" +
                 "        \"color\": \"red\",\n" +
                 "        \"size\": \"M\"\n" +
                 "    },\n" +
-                "    \"tags\": [\n" +
-                "        \"developer\",\n" +
-                "        \"team-lead\"\n" +
-                "    ],\n" +
-                "    \"directory\": {\n" +
-                "        \"id\": 1,\n" +
-                "        \"name\": \"project-team\"\n" +
-                "    },\n" +
-                "    \"created_at\": \"2024-08-25T04:13:21.4566667Z\",\n" +
-                "    \"is_bot\": true,\n" +
-                "    \"is_suspended\": true\n" +
-                "}";
+                "    \"tags\": [\"developer\", \"team-lead\"],\n" +
+                "    \"is_suspended\": true,\n" +
+                "    \"is_bot\": true\n" +
+                "}\n";
 
         // Request
         RequestBody body = RequestBody.create(json, MediaType.parse("application/json; charset=utf-8"));
