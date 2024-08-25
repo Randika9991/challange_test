@@ -5,7 +5,7 @@ export class Home extends Component<any, any> {
     constructor(props: {}) {
         super(props);
         this.state = {
-            user: null, // To store the fetched user data
+            user: null,
         };
     }
 
