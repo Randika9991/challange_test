@@ -7,10 +7,8 @@ import java.io.IOException;
 
 @Service
 public class UserService {
-
     private static final String API_URL = "https://88586822b4ba4bbe858cac2aa6e0cb9c.weavy.io/api/users";
     private static final String API_KEY = "wys_i8fQLwiXHNXQfJnjZq7jPCclFiiZaG3QNGCK";
-
     private final OkHttpClient client = new OkHttpClient();
 
     public String createUser() throws IOException {
@@ -53,6 +51,22 @@ public class UserService {
                 .url(API_URL + "/" + uid)
                 .addHeader("Authorization", "Bearer " + API_KEY)
                 .get()
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            if (!response.isSuccessful()) {
+                throw new IOException("Unexpected code " + response);
+            }
+            return response.body().string();
+        }
+    }
+
+    public String updateUser(String uid, String updatedJson) throws IOException {
+        RequestBody body = RequestBody.create(updatedJson, MediaType.parse("application/json; charset=utf-8"));
+        Request request = new Request.Builder()
+                .url(API_URL + "/" + uid)
+                .addHeader("Authorization", "Bearer " + API_KEY)
+                .put(body)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
